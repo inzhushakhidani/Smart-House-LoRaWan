@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="switch2.css">
+
+  </head>
+
+  <body>
+    <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+      <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+      <ul class="categories list-unstyled">
+        <li>
+          <a href="#"><img class="one" src="1.svg" alt=""></a>
+        </li>
+        <li>
+          <a href="index.html"><img class="one" src="2sw.svg" alt=""></a>
+        </li>
+        <li>
+          <a href="swith2.html"><img class="one" src="3sw.svg" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img class="one" src="4.svg" alt=""></a>
+        </li>
+        
+        <li>
+          <a href="#"><img class="log" src="logout.svg" alt=""></a>
+        </li>
+      </ul>
+    </aside>
+    
+    
+    <section id="wrapper">
+      <div class="black">
+      </div>
+      
+      <div class="nav" style="margin-left: 5%; width: 57%;">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="Vector (4).svg" alt="">
+            <span id="date-time"></span>
+          </div>
+        </div>
+        
+        
+        <div class="nav-links">
+          <img class="net" src="Vector (1).svg" alt="">
+          <img class="net" src="Vector (2).svg" alt="">
+          <img class="net" src="Vector (3).svg" alt="">
+        </div>
+      </div>
+      <style>
+        .nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  margin-left: auto;
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > img {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+    padding: 130px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width:25%;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    display: none;
+  }
+  
+  
+}
+      </style>
+      
+    
+
+      <div class="p-4">
+        <span id="date-time"></span>
+
+        <script>
+          var dt = new Date();
+          var options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+          var formattedDate = dt.toLocaleDateString('en-US', options);
+          document.getElementById('date-time').innerHTML = formattedDate;
+          </script>
+<div class="welcome">
+  <div class="row" id="roow"  style="width: 100%; margin-left: 0.2rem;">
+  <div id="firstt" class="col-md-6 mb-3 mb-lg-0" >
+  <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
+    <h1 class="fs-3">Switches</h1>
+    <section class="statis mt-4 mb-4  text-center">
+      <div class="row" id="row3">
+        <div class="col-6 col-md-4 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l0">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Lamp</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l1">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Hall</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l2">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Space</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l3">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Kitchen</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l4">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Meet</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l5">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Hardware</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l6">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Storage</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l7">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Storage</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l8">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Storage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+  <!-- <div id="secondd"  class="col-md-6 mb-3 mb-lg-0" style="align-items: center;">
+  <div class="content rounded-3 p-3" style="border-radius: 20px;">
+    <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
+    <section class="statis mt-4 mb-4 text-center" >
+      <div class="row" id="row3">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l0">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 1</p>
+          </div>
+        </div>
+        
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l1">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 2</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l2">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Device 3</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l3">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Device 4</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l4">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Ventilation</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <label class="switch">
+              <input type="checkbox" id="l5">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Device 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      
+  </div>
+
+  </div> -->
+  
+  
+
+
+
+</div>
+
+        
+        
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>  
+      </div>
+    </section>
+
+  
+
+
+
+
+
+
+
+    <style>
+.title{
+  margin-left: 6%;
+  font-family: 'Dosis', sans-serif;
+  color:white;
+  font-weight:bolder;
+  font-size:22px;
+  letter-spacing:2px;
+  height:40%;
+  width:40%;
+  display:flex;
+  align-items:center;
+  border-bottom:0.5px solid #ecf0f1;
+}
+.filter{
+  height:40px;
+  width:40px;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  /* margin-right:20px; */
+  border-radius:50%;
+  background:#1abc9c;
+}
+.expenses{
+  height:80px;
+  width:90%;
+  margin:0 auto;
+  display:flex;
+  border-radius:5px;
+  background:rgba(189, 195, 199,0.2);
+  color:white;
+  margin-bottom:10px;
+  box-sizing:border-box;
+  padding:10px;
+  font-family:'Dosis';
+  align-items:center;
+  justify-content:space-around;
+}
+.units{
+  font-size:12px;
+}
+.resource{
+  width:80%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.icon{
+  height:50px;
+  width:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background-color:#ecf0f1;
+}
+.rname{
+  font-size:18px;
+  letter-spacing:2px;
+}
+i,i::before{
+  font-size: 20px;
+}
+.val{
+    width: 50px;
+    text-align: center;
+    padding: 3px 4px;
+    border-radius:1.2em;
+}
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    
+  </script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script>
+const apiSwitch = document.getElementById("l0");
+  var firebaseConfig = {
+    apiKey: "AIzaSyD_io6cQMFOHhTT9IynSZVUnVoRJ6c1CLA",
+    authDomain: "smart-house-lorawan.firebaseapp.com",
+    databaseURL: "https://smart-house-lorawan-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "smart-house-lorawan",
+    storageBucket: "smart-house-lorawan.appspot.com",
+    messagingSenderId: "516669712199",
+    appId: "1:516669712199:web:0d2874b35295bcccf8ce62"
+  };
+
+  
+  firebase.initializeApp(firebaseConfig);
+
+  // Reference to the Firebase Realtime Database
+  var database = firebase.database();
+
+  function updateSwitch() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/0");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch.checked = true;
+        } else {
+          apiSwitch.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+
+  updateSwitch();
+
+  apiSwitch.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/0");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch, 1000);
+
+
+
+  const apiSwitch1 = document.getElementById("l1");
+  function updateSwitch1() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/1");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch1.checked = true;
+        } else {
+          apiSwitch1.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+
+  updateSwitch1();
+
+  apiSwitch1.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/1");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch1, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const apiSwitch2 = document.getElementById("l2");
+  function updateSwitch2() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/2");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch2.checked = true;
+        } else {
+          apiSwitch2.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch2();
+  apiSwitch2.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/2");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch2, 1000);
+
+
+
+
+
+  const apiSwitch3 = document.getElementById("l3");
+  function updateSwitch3() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/3");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch3.checked = true;
+        } else {
+          apiSwitch3.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch3();
+  apiSwitch3.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/3");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch3, 1000);
+
+
+
+
+  const apiSwitch4 = document.getElementById("l4");
+  function updateSwitch4() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/4");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch4.checked = true;
+        } else {
+          apiSwitch4.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch4();
+  apiSwitch4.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/4");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch4, 1000);
+
+
+  const apiSwitch5 = document.getElementById("l5");
+  function updateSwitch5() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/5");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch5.checked = true;
+        } else {
+          apiSwitch5.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch5();
+  apiSwitch5.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/5");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch5, 1000);
+
+
+
+
+  const apiSwitch6 = document.getElementById("l6");
+  function updateSwitch6() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/6");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch6.checked = true;
+        } else {
+          apiSwitch6.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch6();
+  apiSwitch6.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/6");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch6, 1000);
+
+
+
+  const apiSwitch7 = document.getElementById("l7");
+  function updateSwitch7() {
+    // Reference to the 'zero' value in the Firebase database
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/7");
+  
+    firebaseRef.once("value")
+      .then(snapshot => {
+        var zero = snapshot.val();
+      
+        if (zero === 0) {
+          apiSwitch7.checked = true;
+        } else {
+          apiSwitch7.checked = false;
+        }
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+  updateSwitch7();
+  apiSwitch7.addEventListener("change", function() {
+    var firebaseRef = database.ref("Master-1/Relay/08:B6:1F:C1:94:18/7");
+    var value = this.checked ? 0 : 1;
+  
+    firebaseRef.set(value)
+      .then(() => console.log("Data successfully updated"))
+      .catch(error => console.error("Error updating data:", error));
+  });
+
+  setInterval(updateSwitch7, 1000);
+
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+
+
